@@ -1,9 +1,10 @@
-a = 8
-b = 3
-if (a > 0):
-    if (b > 0):
-        print("Keduanya positif")
-    else:
-        print("Keduanya tidak positif")
-else:
-    print("Keduanya tidak positif")
+a = -2
+b = -7
+if (a < 0) or (b < 0):
+    print("Keduanya positif")
+elif (a > 0) or (b > 0):
+    print("Salah satunya positif")
+elif (a > 0) and (b > 0):
+    print("Salah satunya negatif")
+elif (a < 0) and (b < 0):
+    print("Keduanya negatif")
