@@ -1,5 +1,7 @@
 print(" Data Jumlah Anak Laki-Laki dan Perempuan dari Mahasiswa PTIK UNS ")
-laki = '+'*45
-print(" Laki-Laki : ", laki , ("(45)"))
-perempuan = '+'*35
-print(" Perempuan : ", perempuan , ("(35)"))
+laki   = int(input('Jumlah Mhs Laki-laki   '))
+wanita = int(input('Jumlah Mhs Perempuan   '))
+graflaki   = '+'*laki
+grafwanita = '+'*wanita
+print('Laki - laki     :',graflaki,'(',laki,')',)
+print('Perempuan       :',grafwanita,'(',wanita,')',)
