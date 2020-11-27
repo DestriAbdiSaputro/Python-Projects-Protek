@@ -14,5 +14,8 @@ def starFormation3(n):
     else:
         starFormation1(n//2+1)
     starFormation2(n//2)
+<<<<<<< HEAD
     
+=======
+>>>>>>> 56aaffc43f407686b031012bc18558b41cb3c9ad
 starFormation3(7)
