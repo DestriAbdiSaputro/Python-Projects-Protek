@@ -1,33 +1,26 @@
-def dataStat(x):
-    if(isinstance(x, list)):
-        tupleX  = tuple(x)
-        a  = sum(tupleX) / len(tupleX)
-        b  = max(tupleX) 
-        c  = min(tupleX)
-        return [a, b, c]
-    else:
-        print('Data tidak valid')
-        return False
+def dataStat(x) :
+    a = sum(x) / len(x)
+    b = max(x)
+    c = min(x)
+    return [a,b,c]
 
-def DataInput():
-    try:
-        count = int(input('Berapa data yang akan diinput? '))
-        loop = 0
-        data = []
-        while loop < count:
-            number = int(input('Masukkan bil bulat ke-{0} : '.format(loop+1)))
-            data.append(number)
-            loop += 1
+while True :
+    try :
+        n = int(input('Berapa data yang akan input ? : '))
+        break
+    except ValueError :
+        print('Input tidak valid')
+        continue
+data = []
+i = 0
+while (i < n) :
+    try :
+        bil = int(input('Masukkan bil bulat ke-{0} : '.format(i+1)))
+        data.append(bil)
+        i += 1
+    except ValueError :
+        print('Input tidak valid')
 
-        return data
-    except ValueError:
-        print('data yang anda masukan bukan angka / salah')
-        return False
+printData = dataStat(data)        
+print(printData)
 
-DataList = DataInput()
-print('='*10,'Hasil','='*10)
-if(DataList):
-    result   = dataStat(DataList)
-    print('Rata-rata  {0}        : {1}'.format(DataList,result[0]))
-    print('Nilai tertinggi {0}  : {1}'.format(DataList,result[1]))
-    print('Nilai terendah {0}   : {1}'.format(DataList,result[2]))
