@@ -10,3 +10,6 @@ try:
         file.close()
 except FileNotFoundError:
     print("File Tidak Ada")
+except OSError:
+    print("Data yang anda masukkan tidak valid")
+
