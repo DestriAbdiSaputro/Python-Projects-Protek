@@ -1,10 +1,9 @@
 myfile = input('Masukkan nama file : ')
 try:
     file = open(myfile,'r')
-    bil = file.readlines()
     genap = 0
     ganjil = 0
-    for i in bil:
+    for i in file:
         j = int(i)
         if j % 2 == 0:
             genap += 1
